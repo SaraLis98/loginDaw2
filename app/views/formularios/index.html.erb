@@ -1,0 +1,34 @@
+<div class="container">
+  <h1>Formularios</h1>
+
+  <table class="table table-striped table-dark">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Lastname</th>
+      <th>Country</th>
+      <th>Genre</th>
+      <th colspan="3"></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @formularios.each do |formulario| %>
+      <tr>
+        <td><%= formulario.name %></td>
+        <td><%= formulario.lastname %></td>
+        <td><%= formulario.country %></td>
+        <td><%= formulario.genre %></td>
+        <td><%= link_to 'Show', formulario, class:'btn btn-info btn-sm'%></td>
+        <td><%= link_to 'Edit', edit_formulario_path(formulario), class:'btn btn-secondary btn-sm' %></td>
+        <td><%= link_to 'Destroy', formulario, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger btn-sm'%></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Formulario', new_formulario_path, class:'btn btn-primary' %>
+</div>
+

@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 mx-auto">
+      <div class="myForm">
+        <p>
+          <ul class="lista">
+            <li>
+              <strong>Name:</strong>
+              <%= @formulario.name %>
+            </li>
+          </ul>
+          <ul class="lista">
+            <li>
+              <strong>Lastname:</strong>
+              <%= @formulario.lastname %>
+            </li>
+          </ul>
+          <ul class="lista">
+            <li>
+              <strong>Country:</strong>
+              <%= @formulario.country %>
+            </li>
+          </ul>
+          <ul class="lista">
+            <li>
+              <strong>Genre:</strong>
+              <%= @formulario.genre %>
+            </li>
+          </ul>
+        </p>
+        <p class="text-center">
+          <%= link_to 'Edit', edit_formulario_path(@formulario) %> |
+          <%= link_to 'Back', formularios_path %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+

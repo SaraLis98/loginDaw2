@@ -1,0 +1,38 @@
+
+<%= form_with(model: formulario) do |form| %>
+<% if formulario.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(formulario.errors.count, "error") %> prohibited this formulario from being saved:</h2>
+
+    <ul>
+      <% formulario.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class="field">
+  <%= form.label :name %>
+  <%= form.text_field :name, class:'form-control' %>
+</div>
+
+<div class="field">
+  <%= form.label :lastname %>
+  <%= form.text_field :lastname, class:'form-control' %>
+</div>
+
+<div class="field">
+  <%= form.label :country %>
+  <%= form.text_field :country, class:'form-control' %>
+</div>
+
+<div class="field">
+  <%= form.label :genre %>
+  <%= form.text_field :genre, class:'form-control' %>
+</div>
+
+<div class="actions my-3">
+  <%= form.submit%>
+</div>
+<% end %>
